@@ -1,0 +1,15 @@
+[package]
+name = "fontys-ftenl-thesis-template"
+version = "0.1.0"
+entrypoint = "src/lib.typ"
+authors = ["Paul Recker"]
+license = "MIT"
+description = "An unofficial template for writing theses at Fontys University of Applied Sciences (FTenL)."
+repository = "https://github.com/reckerp/fontys-thesis-template"
+keywords = ["Fontys University of Applied Sciences", "Fontys", "thesis"]
+categories = ["thesis"]
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"
