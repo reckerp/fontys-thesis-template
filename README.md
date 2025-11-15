@@ -21,6 +21,7 @@ A comprehensive (unofficial) [Typst](https://typst.app/) template for bachelor t
 - **Fully automatic word counting** - powered by the wordometer package!
 - Automatic table of contents, list of figures, and list of tables
 - Support for abbreviations and glossary
+- **Mermaid chart support** - create professional diagrams using the oxdraw package
 - Harvard/APA citation style
 - Statement of authenticity
 - Customizable fonts (body text and monospace)
@@ -45,6 +46,9 @@ A comprehensive (unofficial) [Typst](https://typst.app/) template for bachelor t
     │   ├── abstract.typ       # Your abstract
     │   ├── glossary.typ       # Glossary entries
     │   └── abbreviations.typ  # List of abbreviations
+    ├── assets/                # Assets directory
+    │   ├── charts/            # Mermaid chart files (.mmd)
+    │   └── signature.png      # Your signature (optional)
     ├── appendix/              # Appendix files (optional)
     │   └── appendix.typ       # Appendix content
     ├── main.typ               # Main file (configure)

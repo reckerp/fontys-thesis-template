@@ -7,6 +7,7 @@
 #import "pages/authenticity.typ": authenticity-page
 #import "utils/wordcount.typ": display-word-count, word-count
 #import "utils/glossary.typ": create-glossary, create-abbreviations
+#import "utils/chart.typ": chart
 
 #let thesis(
   // Document metadata

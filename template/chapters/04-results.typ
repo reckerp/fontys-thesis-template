@@ -1,3 +1,4 @@
+#import "@local/fontys-ftenl-thesis-template:0.1.0": chart
 = Results
 
 #lorem(25)
@@ -30,6 +31,14 @@
 == Analysis
 
 #lorem(35)
+
+#figure(
+  chart(read("../assets/charts/example-flowchart.mmd"), width: 50%),
+  caption: [System architecture overview]
+)
+
+#lorem(10)
+
 
 == Challenges
 
