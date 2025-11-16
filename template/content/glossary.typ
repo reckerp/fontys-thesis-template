@@ -1,25 +1,22 @@
 // Glossary entries for the thesis
-// Add your glossary terms here
+// Using the glossarium package for glossary management
+// For glossary terms: "short" is displayed in text, "description" appears in the glossary
 
 #let glossary-entries = (
   (
-    term: "Microservices",
-    definition: "An architectural style that structures an application as a collection of loosely coupled services.",
+    key: "microservices",
+    short: "Microservices",
+    description: "An architectural style that structures an application as a collection of loosely coupled services.",
   ),
   (
-    term: "Monolithic Architecture",
-    definition: "A software design pattern where all components of an application are interconnected and interdependent.",
+    key: "container",
+    short: "Container",
+    plural: "Containers",
+    description: "A lightweight, standalone package that includes everything needed to run a piece of software, including code, runtime, system tools, libraries, and settings.",
   ),
   (
-    term: "Scalability",
-    definition: "The capability of a system to handle a growing amount of work by adding resources.",
-  ),
-  (
-    term: "Container",
-    definition: "A lightweight, standalone package that includes everything needed to run a piece of software.",
-  ),
-  (
-    term: "Strangler Fig Pattern",
-    definition: "A migration pattern where a new system gradually replaces an old system by incrementally replacing specific pieces of functionality.",
+    key: "scalability",
+    short: "Scalability",
+    description: "The capability of a system to handle a growing amount of work by adding resources to the system.",
   ),
 )

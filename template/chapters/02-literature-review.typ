@@ -5,13 +5,6 @@
 == Theoretical Framework
 
 #lorem(40) @example2024
-
-=== Key Concepts
-
-#lorem(25)
-
-=== Related Work
-
 #lorem(35) @examplebook2023
 
 == Comparison of Approaches

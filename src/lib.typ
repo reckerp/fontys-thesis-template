@@ -6,8 +6,9 @@
 #import "pages/abstract.typ": abstract-page
 #import "pages/authenticity.typ": authenticity-page
 #import "utils/wordcount.typ": display-word-count, word-count
-#import "utils/glossary.typ": create-glossary, create-abbreviations
 #import "utils/chart.typ": chart
+#import "@preview/glossarium:0.5.9": make-glossary, register-glossary, print-glossary, gls, glspl
+#import "@preview/abbr:0.3.0"
 
 #let thesis(
   // Document metadata
@@ -67,6 +68,22 @@
   // The document content
   body,
 ) = {
+  
+  // Initialize glossarium for glossary terms (MUST come before register-glossary)
+  show: make-glossary
+  
+  // Register glossary entries AFTER make-glossary
+  if glossary != none and type(glossary) == array and glossary.len() > 0 {
+    register-glossary(glossary)
+  }
+  
+  // Register abbreviation entries BEFORE abbr.show-rule
+  if abbreviations != none and type(abbreviations) == array and abbreviations.len() > 0 {
+    abbr.make(..abbreviations)
+  }
+  
+  // Initialize abbr package for abbreviations
+  show: abbr.show-rule
   
   // Set document metadata
   set document(
@@ -153,19 +170,6 @@
     )
   }
   
-  // Configure figure numbering and spacing
-  set figure(
-    gap: 1em,
-  )
-  
-  show figure: it => {
-    set align(center)
-    block(
-      above: 1.5em,
-      below: 1.5em,
-      it
-    )
-  }
   
   // Configure table styling
   set table(
@@ -274,17 +278,36 @@
   // 7. List of abbreviations (only if provided and not empty)
   if abbreviations != none {
     if type(abbreviations) == array and abbreviations.len() > 0 {
-      create-abbreviations(abbreviations)
+      pagebreak()
+      {
+        // Temporarily disable heading numbering for abbr.list()
+        set heading(numbering: none, outlined: true)
+        abbr.list()
+      }
     }
   }
+
+  // Configure abbr styling to use normal text
+  abbr.config(style: it => it)
   
   // 8. Glossary (only if provided and not empty)
   if glossary != none {
     if type(glossary) == array and glossary.len() > 0 {
-      create-glossary(glossary)
+      pagebreak()
+      heading(numbering: none, outlined: true)[Glossary]
+      print-glossary(
+        show-all: true,
+        disable-back-references: true,
+        glossary
+      )
     }
   }
-  
+
+  // Configure figure numbering and spacing
+  set figure(
+    gap: 1em,
+  )
+
   // Mark the end of front matter for later reference
   [#metadata("end-of-front-matter") <end-of-front-matter>]
   
