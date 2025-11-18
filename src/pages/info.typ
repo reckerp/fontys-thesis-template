@@ -18,7 +18,6 @@
 ) = {
   page(
     margin: (left: 1.5in, right: 1.5in, top: 1.5in, bottom: 1.5in),
-    numbering: none,
   )[
     #set text(font: font-body)
     

@@ -193,6 +193,12 @@
       location: location,
     )
   }
+   
+  // Set page numbering to Roman numerals for front matter
+  set page(
+    numbering: "i",
+    number-align: center,
+  )
   
   // 2. Information page
   if thesis-type != none {
@@ -216,13 +222,14 @@
     )
   }
   
-  // Set page numbering to Roman numerals for front matter
-  set page(
-    numbering: "i",
-    number-align: center,
+  authenticity-page(
+    font-body,
+    author: author,
+    student-number: student-number,
+    date: date,
+    location: location,
+    signature-image: signature-image,
   )
-  
-  counter(page).update(1)
   
   // 3. Abstract
   if abstract != none {
@@ -308,9 +315,6 @@
     gap: 1em,
   )
 
-  // Mark the end of front matter for later reference
-  [#metadata("end-of-front-matter") <end-of-front-matter>]
-  
   // Reset page numbering to Arabic numerals for main content
   pagebreak()
   
@@ -335,39 +339,6 @@
     pagebreak()
     bibliography-file
   }
-  
-  // Statement of authenticity at the end
-  // Reset to Roman numerals, continuing from where front matter ended
-  pagebreak()
-  
-  set page(
-    numbering: "i",
-    number-align: center,
-  )
-  
-  // Continue Roman numbering from where front matter ended
-  context {
-    // Query the label we placed at the end of front matter
-    let end-of-front = query(<end-of-front-matter>)
-    if end-of-front.len() > 0 {
-      // Get the page number at the end of front matter
-      let front-matter-end-page = counter(page).at(end-of-front.first().location()).first()
-      // Continue from the next Roman numeral
-      counter(page).update(front-matter-end-page + 1)
-    } else {
-      // Fallback: start from a reasonable number
-      counter(page).update(1)
-    }
-  }
-  
-  authenticity-page(
-    font-body,
-    author: author,
-    student-number: student-number,
-    date: date,
-    location: location,
-    signature-image: signature-image,
-  )
 }
 
 // Export page components for custom usage

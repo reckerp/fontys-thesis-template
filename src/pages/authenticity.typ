@@ -58,8 +58,6 @@
     
     *Signature:*
     
-    #v(0.3cm)
-    
     // display signature image if provided
     #if signature-image != none {
       block(
