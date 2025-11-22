@@ -4,6 +4,7 @@
 #import "pages/cover.typ": cover-page
 #import "pages/info.typ": info-page
 #import "pages/abstract.typ": abstract-page
+#import "pages/acknowledgements.typ": acknowledgements-page
 #import "pages/authenticity.typ": authenticity-page
 #import "utils/wordcount.typ": display-word-count, word-count
 #import "utils/chart.typ": chart
@@ -37,6 +38,11 @@
   
   // Abstract and content
   abstract: none,
+
+  // Acknowledgements
+  display-acknowledgements: false,
+  ai-acknowledgements: false,
+  further-acknowledgements: none,
   
   // Additional content
   glossary: none,
@@ -60,7 +66,7 @@
   font-size: 11pt,
   
   // Page settings (A4 only)
-  margin: (left: 1.5in, right: 1.5in, top: 1in, bottom: 1in),
+  margin: (left: 1.2in, right: 1in, top: 1in, bottom: 1in),
   
   // Table of contents settings
   toc-depth: 3,
@@ -221,6 +227,14 @@
       confidential: confidential,
     )
   }
+
+  // 3. Abstract
+  if abstract != none {
+    abstract-page(
+      font-body,
+      abstract: abstract,
+    )
+  }
   
   authenticity-page(
     font-body,
@@ -230,14 +244,15 @@
     location: location,
     signature-image: signature-image,
   )
-  
-  // 3. Abstract
-  if abstract != none {
-    abstract-page(
+
+  if display-acknowledgements == true {
+    acknowledgements-page(
       font-body,
-      abstract: abstract,
+      ai-acknowledgements: ai-acknowledgements,
+      further-acknowledgements: further-acknowledgements,
     )
   }
+
   
   // 4. Table of contents
   pagebreak()
@@ -281,6 +296,21 @@
       )
     }
   }
+
+
+  context {
+    let listings = query(figure.where(kind: raw))
+    if listings.len() > 0 {
+      pagebreak()
+      heading(numbering: none, outlined: true)[List of Listings]
+      outline(
+        title: none,
+        target: figure.where(kind: raw),
+      )
+    }
+  }
+
+
   
   // 7. List of abbreviations (only if provided and not empty)
   if abbreviations != none {

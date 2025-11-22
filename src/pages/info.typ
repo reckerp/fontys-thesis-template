@@ -17,7 +17,7 @@
   confidential: false,
 ) = {
   page(
-    margin: (left: 1.5in, right: 1.5in, top: 1.5in, bottom: 1.5in),
+    margin: (left: 1.2in, right: 1.0in, top: 1.0in, bottom: 1.0in),
   )[
     #set text(font: font-body)
     

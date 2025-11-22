@@ -40,6 +40,9 @@
   abstract: abstract-content,
   glossary: glossary-entries,
   abbreviations: abbreviation-entries,
+
+  display-acknowledgements: true,
+  ai-acknowledgements: true,
   
   // Appendix (optional - set to none if you don't have an appendix)
   // The appendix appears after the main chapters and before the bibliography
