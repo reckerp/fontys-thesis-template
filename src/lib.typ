@@ -74,6 +74,9 @@
   // The document content
   body,
 ) = {
+  // Validate required parameters
+  assert(title != none, message: "thesis() requires a 'title' parameter. Please provide a title for your thesis.")
+  assert(author != none, message: "thesis() requires an 'author' parameter. Please provide the author name.")
   
   // Initialize glossarium for glossary terms (MUST come before register-glossary)
   show: make-glossary
