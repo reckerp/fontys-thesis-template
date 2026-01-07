@@ -22,7 +22,7 @@ A comprehensive (unofficial) [Typst](https://typst.app/) template for bachelor t
 - Automatic table of contents, list of figures, and list of tables
 - Support for abbreviations and glossary
 - **Mermaid chart support** - create professional diagrams using the oxdraw package
-- Harvard/APA citation style
+- Harvard citation style (Cite Them Right 12th edition)
 - Statement of authenticity
 - Customizable fonts (body text and monospace)
 - Clean, modular structure with separate content files

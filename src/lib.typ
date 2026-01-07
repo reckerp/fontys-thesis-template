@@ -186,9 +186,9 @@
     stroke: 0.5pt,
   )
 
-  // Configure bibliography style (Harvard)
+  // Configure bibliography style
   set bibliography(
-    style: "apa",
+    style: "harvard-cite-them-right",
     title: "References",
   )
 
