@@ -12,7 +12,7 @@
 
 #lorem(25)
 
-== Deliverables Delivered
+== Deliverables
 
 #lorem(35)
 

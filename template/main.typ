@@ -78,8 +78,14 @@
 
 // Include all chapters (word counting is automatic)
 #include "chapters/introduction.typ"
+#pagebreak()
+
 #include "chapters/project_definition.typ"
+#pagebreak()
+
 // Add your content chapters here by duplicating placeholder_content_chapter.typ
 // and renaming it to match your chapter topic (e.g., analysis.typ, design.typ, etc.)
 #include "chapters/placeholder_content_chapter.typ"
+#pagebreak()
+
 #include "chapters/conclusion.typ"
