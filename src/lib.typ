@@ -6,6 +6,7 @@
 #import "pages/abstract.typ": abstract-page
 #import "pages/acknowledgements.typ": acknowledgements-page
 #import "pages/authenticity.typ": authenticity-page
+#import "pages/ai-authenticity.typ": ai-authenticity-page
 #import "utils/wordcount.typ": display-word-count, word-count
 #import "utils/chart.typ": chart
 #import "@preview/glossarium:0.5.9": make-glossary, register-glossary, print-glossary, gls, glspl
@@ -41,6 +42,12 @@
 
   // Acknowledgements
   acknowledgements: none,
+
+  // AI Usage Declaration
+  ai-used: false,
+  ai-tools: none,
+  ai-chapter-description: none,
+  ai-usage-explanation: none,
 
   // Additional content
   glossary: none,
@@ -246,6 +253,20 @@
     signature-image: signature-image,
   )
 
+  // AI Authenticity page
+  ai-authenticity-page(
+    font-body,
+    author: author,
+    student-number: student-number,
+    date: date,
+    location: location,
+    signature-image: signature-image,
+    ai-used: ai-used,
+    ai-tools: ai-tools,
+    ai-chapter-description: ai-chapter-description,
+    ai-usage-explanation: ai-usage-explanation,
+  )
+
   // Acknowledgements page (only if provided)
   if acknowledgements != none {
     acknowledgements-page(
@@ -377,3 +398,4 @@
 #let info = info-page
 #let abstract-content = abstract-page
 #let authenticity = authenticity-page
+#let ai-authenticity = ai-authenticity-page

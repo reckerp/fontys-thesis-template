@@ -95,6 +95,13 @@ A comprehensive (unofficial) [Typst](https://typst.app/) template for bachelor t
 - `appendix` (content or none): Appendix content (include from appendix/appendix.typ)
 - `confidential` (boolean): Whether the thesis is confidential (default: false)
 
+### AI Usage Declaration
+
+- `ai-used` (boolean): Whether AI tools were used in the thesis (default: false)
+- `ai-tools` (content or none): List of AI tools used (e.g., "ChatGPT, GitHub Copilot")
+- `ai-chapter-description` (content or none): Description of where AI was used in the thesis
+- `ai-usage-explanation` (content or none): Explanation of why and how AI was used
+
 ### Styling
 
 - `font-body` (string or array): Font(s) for body text (default: Linux Libertine with fallbacks)

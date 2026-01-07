@@ -47,6 +47,14 @@
   // ],
   acknowledgements: none,
 
+  // AI Usage Declaration
+  // Set ai-used to true if you used AI tools in your thesis
+  ai-used: false,
+  // If ai-used is true, provide details below:
+  // ai-tools: [ChatGPT (GPT-4), GitHub Copilot, Grammarly],
+  // ai-chapter-description: [Chapter 3 (Literature Review): Used ChatGPT to help structure ideas and improve clarity. Chapter 5 (Implementation): Used GitHub Copilot for code suggestions.],
+  // ai-usage-explanation: [AI tools were used to improve writing clarity, grammar, and to assist with code implementation. All AI-generated content was reviewed, edited, and verified by the author.],
+
   // Appendix (optional - set to none if you don't have an appendix)
   // The appendix appears after the main chapters and before the bibliography
   appendix: include "appendix/appendix.typ",
