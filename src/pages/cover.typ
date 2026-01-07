@@ -6,7 +6,7 @@
   location: none,
 ) = {
   page(
-    margin: (left: 1.5in, right: 1.5in, top: 1.5in, bottom: 1.5in),
+    margin: (left: 1in, right: 1in, top: 1.5in, bottom: 1.5in),
     numbering: none,
   )[
     #align(center + horizon)[
