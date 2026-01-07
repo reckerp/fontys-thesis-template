@@ -88,6 +88,7 @@ A comprehensive (unofficial) [Typst](https://typst.app/) template for bachelor t
 ### Content
 
 - `abstract` (content): Abstract text (import from content/abstract.typ)
+- `acknowledgements` (content or none): Acknowledgements text (default: none, disabled by default)
 - `glossary` (array): Glossary entries (import from content/glossary.typ)
 - `abbreviations` (array): Abbreviations list (import from content/abbreviations.typ)
 - `bibliography-file` (string or none): Path to .bib file (e.g., "references.bib")

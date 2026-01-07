@@ -40,9 +40,7 @@
   abstract: none,
 
   // Acknowledgements
-  display-acknowledgements: false,
-  ai-acknowledgements: false,
-  further-acknowledgements: none,
+  acknowledgements: none,
 
   // Additional content
   glossary: none,
@@ -248,11 +246,11 @@
     signature-image: signature-image,
   )
 
-  if display-acknowledgements == true {
+  // Acknowledgements page (only if provided)
+  if acknowledgements != none {
     acknowledgements-page(
       font-body,
-      ai-acknowledgements: ai-acknowledgements,
-      further-acknowledgements: further-acknowledgements,
+      acknowledgements: acknowledgements,
     )
   }
 

@@ -41,8 +41,11 @@
   glossary: glossary-entries,
   abbreviations: abbreviation-entries,
 
-  display-acknowledgements: true,
-  ai-acknowledgements: true,
+  // Acknowledgements (optional - set to none to disable)
+  // acknowledgements: [
+  //   I would like to thank my supervisors, colleagues, and family for their support.
+  // ],
+  acknowledgements: none,
 
   // Appendix (optional - set to none if you don't have an appendix)
   // The appendix appears after the main chapters and before the bibliography
