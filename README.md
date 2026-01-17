@@ -1,8 +1,8 @@
-# Fontys Bachelor Thesis Template
+# Fontys ICT Bachelor Thesis Template
 
-> NOTE: This template is NOT officially endorsed by Fontys University of Applied Sciences (FTenL).
+> NOTE: This template is not officially endorsed by Fontys University of Applied Sciences. Use of this template is at your own risk; the author assumes no responsibility for errors, omissions, or academic consequences.
 
-A comprehensive (unofficial) [Typst](https://typst.app/) template for bachelor theses at Fontys University of Applied Sciences (FTenL), Netherlands.
+A comprehensive (unofficial) [Typst](https://typst.app/) template for ICT bachelor theses at Fontys University of Applied Sciences (FTenL), Netherlands.
 
 ## Quick Start
 
@@ -37,11 +37,7 @@ A comprehensive (unofficial) [Typst](https://typst.app/) template for bachelor t
  ── thesis /
     ├── chapters/              # Your thesis chapters
     │   ├── 01-introduction.typ
-    │   ├── 02-literature-review.typ
-    │   ├── 03-methodology.typ
-    │   ├── 04-results.typ
-    │   ├── 05-discussion.typ
-    │   └── 06-conclusion.typ
+    │   └── 0x-conclusion.typ
     ├── content/               # Separate content files
     │   ├── abstract.typ       # Your abstract
     │   ├── glossary.typ       # Glossary entries
