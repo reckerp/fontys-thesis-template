@@ -2,7 +2,7 @@
 
 # Package information from typst.toml
 PACKAGE_NAME = fontys-ftenl-thesis-template
-PACKAGE_VERSION = 0.1.0
+PACKAGE_VERSION = 0.1.1
 NAMESPACE = local
 
 # Detect OS and set data directory
